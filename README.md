@@ -20,11 +20,11 @@ Within the solution, you can use any tool from the React environment. Packages s
 
 In the `src/components/App.tsx` file you will find all the HTML elements you need to solve the task. The elements with id references mentioned in Task objective section are available there.
 
-You can find the HTML structure under "designs/index.html". However HTML elements in the `src/components/App.tsx` are already in the right place and contain all necessary css classes. No additional CSS is required.
+You can find the HTML structure under `designs/index.html`. However HTML elements in the `src/components/App.tsx` are already in the right place and contain all necessary css classes. No additional CSS is required.
 
 Task objective:
 
-The main task is to fetch past launches from SpaceX API and show the correctly converted result in the launches list area "#launches-area". You can use GraphQL or REST API for this purpose. Both URLs to endpoints are defined in the "src/configs/api-urls.ts" file.
+The main task is to fetch past launches from SpaceX API and show the correctly converted result in the launches list area "#launches-area". You can use GraphQL or REST API for this purpose. Both URLs to endpoints are defined in the `src/configs/api-urls.ts` file.
 
 Documentation for GraphQL - https://api.spacex.land/graphql/
 
