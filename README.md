@@ -1,46 +1,58 @@
-# Getting Started with Create React App
+# React Task
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+The project supports typescript and javascript.
 
-In the project directory, you can run:
+Please download the repository and install the packages.
 
-### `yarn start`
+```
+npm install
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+You can run project by:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```
+npm start
+```
 
-### `yarn test`
+Within the solution, you can use any tool from the React environment. Packages such as Apollo Client and Redux have been pre-configured and their Providers have been added in "src/index.tsx". If needed they are ready to use.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+In the "src/components/App.tsx" file you will find all the HTML elements you need to solve the task. The elements with id references mentioned in Task objective section are available there.
 
-### `yarn build`
+You can find the HTML structure under "designs/index.html". However HTML elements in the "src/components/App.tsx" are already in the right place and contain all necessary css classes. No additional CSS is required.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Task objective:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The main task is to fetch past launches from SpaceX API and show the correctly converted result in the launches list area "#launches-area". You can use GraphQL or REST API for this purpose. Both URLs to endpoints are defined in the "src/configs/api-urls.ts" file.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Documentation for GraphQL - https://api.spacex.land/graphql/
+Documentation for REST - https://docs.spacexdata.com/#fce450d6-e064-499a-b88d-34cc22991bcc
 
-### `yarn eject`
+The launches area "#launches-area" should be shown or hidden on the toggle list button "#launches-area-toggler" click. The area should be initially hidden.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Launches in the list should be grouped according to the month in which they took place ("launch_date_utc" field).
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Launches grouped by month should be ordered by launches count. The month with the most launches should be on the top of the list.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Dummy launches area list structure:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+ul
+li - Month name 1 (launches count - 3)
+li - mission_name 1
+li - mission_name 2
+li - mission_name 3
+li - Month name 2 (launches count - 1)
+li - mission_name 4
+[...]
+```
 
-## Learn More
+IMPORTANT! These actions however shouldn't affect the rendering counter. It should show green "1", which means that the App component has only been rendered once. <RenderCounter /> should stay inside the APP component.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Bonus point:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- implement/design solution for easy access to past launches data in the app
+- load "#launches-area" code with the first click on "#launches-area-toggler"
+- basic tests
+- typescript types
