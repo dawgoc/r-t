@@ -49,7 +49,7 @@ li - mission_name 4
 [...]
 ```
 
-IMPORTANT! These actions however shouldn't affect the rendering counter. It should show green "1", which means that the App component has only been rendered once. <RenderCounter /> should stay inside the APP component.
+IMPORTANT! These actions however shouldn't affect the rendering counter. It should show green "1", which means that the App component has only been rendered once. `<RenderCounter />` should stay inside the APP component.
 
 Bonus point:
 
